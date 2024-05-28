@@ -1,0 +1,7 @@
+<%= simple_form_for(@planet) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :detail %>
+  <%= f.input :price %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>
