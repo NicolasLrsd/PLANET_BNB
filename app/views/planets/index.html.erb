@@ -1,4 +1,6 @@
 <h1>Planets#index</h1>
+<%= link_to "login", new_user_session_path %>
+
 
 <ul>
   <%@planets.each do |planet|%>
@@ -7,7 +9,3 @@
 </ul>
 
 <p><%= link_to "Add a new planet location", new_planet_path %></p>
-
-
-
-<%= link_to "login", new_user_session_path %>
