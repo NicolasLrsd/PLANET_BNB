@@ -1,9 +1,11 @@
 <h1><%= @planet.name %><h1>
+
 <% if @planet.photo.attached? %>
-  <p><%= cl_image_tag @planet.photo.key, height: 500, width: 600, crop: :fill %></p>
-  <% else %>
-  <p><%= image_tag "first_offers", height: 500, width: 600 %></p>
-  <% end %>
+<p><%= cl_image_tag @planet.photo.key, height: 500, width: 600, crop: :fill %></p>
+<% else %>
+<p><%= image_tag "first_offers", height: 500, width: 600 %></p>
+<% end %>
+
   <p><%= @planet.detail%></p>
   <p><%= @planet.price%>$</p>
 
