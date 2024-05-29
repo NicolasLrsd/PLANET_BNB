@@ -14,8 +14,10 @@
   <body class="body">
     <nav class="navbar">
       <div class="logo_title">
-        <%= image_tag "rocket-png-40798.png", class: "rocket", alt: "rocket" %>
-          <a href="#">Planet Bnb</a>
+      <%= link_to planets_path do %>
+        <%= image_tag "rocket-png-40798.png", class: "rocket", alt: "rocket"%>
+        <%= "Planet bnb" %>
+      <% end %>
       </div>
       <div class="end-navbar">
         <%= link_to "Add a new planet", new_planet_path, class: "text-decoration-none text-light"%>
