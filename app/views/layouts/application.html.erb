@@ -23,7 +23,9 @@
         <%= link_to "Add a new planet", new_planet_path, class: "text-decoration-none text-light"%>
 
         <div class="drop-avatar">
+          <%= link_to new_user_session_path do %>
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
+          <% end %>
           <div class="dropdown mr-5">
             <button class="btn btn-secondary rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa-solid fa-list"></i>        </button>
