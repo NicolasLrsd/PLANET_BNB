@@ -14,22 +14,25 @@
   <body class="body">
     <nav class="navbar">
       <div class="logo_title">
-        <h3>Logo</h3>
-        <a href="#">Planet Bnb</a>
+        <%= image_tag "rocket-png-40798.png", class: "rocket", alt: "rocket" %>
+          <a href="#">Planet Bnb</a>
       </div>
       <div class="end-navbar">
-        <%= link_to "Add a new planet", new_planet_path %>
-        <%= image_tag("https://www.iconpacks.net/free-icon/user-profile-4255.html")%>
-        <div class="dropdown mr-5">
-          <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-list"></i>        </button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><button class="dropdown-item" type="button">Messages</button></li>
-            <li><button class="dropdown-item" type="button">Favoris</button></li>
-            <li><button class="dropdown-item" type="button">Voyages</button></li>
-          </ul>
+        <%= link_to "Add a new planet", new_planet_path, class: "text-decoration-none text-light"%>
+
+        <div class="drop-avatar">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
+          <div class="dropdown mr-5">
+            <button class="btn btn-secondary rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-list"></i>        </button>
+            <ul class="dropdown-menu rounded-5 dropdown-menu-end dropdown-menu-dark mt-3">
+              <li><button class="dropdown-item" type="button">Messages</button></li>
+              <li><button class="dropdown-item" type="button">Favoris</button></li>
+              <li><button class="dropdown-item" type="button">Voyages</button></li>
+            </ul>
+            </div>
+          </div>
         </div>
-      </div>
 
     </nav>
     <%= yield %>

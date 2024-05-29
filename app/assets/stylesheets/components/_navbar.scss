@@ -6,12 +6,12 @@
     align-items: center;
     justify-content: space-between;
     width: 20%;
-
+    padding-left: 5%;
   }
   .logo_title a{
     text-decoration: none;
     color: whitesmoke;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 }
 .end-navbar {
@@ -21,6 +21,16 @@
   align-items: center;
   margin-right: 5% ;
 }
+.drop-avatar{
+border: solid 2px white;
+display: flex;
+justify-content: space-around;
+border-radius: 50px;
+padding: 2%;
+}
 .dropdown-navbar{
   right: 0 !important;
+}
+.rocket{
+  width: 20%;
 }
