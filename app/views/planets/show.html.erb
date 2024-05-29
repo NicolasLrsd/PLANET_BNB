@@ -1,20 +1,18 @@
-<div class="container d-flex m-5">
-  <h1><%= @planet.name %><h1>
-
-<div class="picture">
-  <% if @planet.photo.attached? %>
-  <p><%= cl_image_tag @planet.photo.key, height: 700, width: 700, crop: :fill %></p>
-  <% else %>
-  <p><%= image_tag "planet-par-defaut", height: 700, width: 700 %></p>
-  <% end %>
-</div>
-<div class="details">
-  <p><%= @planet.detail%></p>
-  <p><%= @planet.price%>$</p>
-</div>
-
-  <% if current_user == @planet.user %>
-  <%= link_to "Edit your planet", edit_planet_path, class:"btn btn-dark border border-white rounded-5 text-decoration-none"%>
-  <%= link_to "Delete", planet_path(@planet), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-dark border border-white rounded-5 text-decoration-none"%>
-  <% end %>
+<div class="container d-flex justify-content-around align-items-center">
+  <div class="picture m-5">
+    <% if @planet.photo.attached? %>
+    <p><%= cl_image_tag @planet.photo.key, height: 700, width: 700, crop: :fill %></p>
+    <% else %>
+    <p><%= image_tag "planet-par-defaut", height: 700, width: 700 %></p>
+    <% end %>
+  </div>
+  <div class="content m-5">
+    <h1><%= @planet.name %></h1>
+    <p><%= @planet.detail%></p>
+    <p><%= @planet.price%>$</p>
+    <% if current_user == @planet.user %>
+    <%= link_to "Edit your planet", edit_planet_path, class:"btn btn-dark border border-white rounded-5 text-decoration-none"%>
+    <%= link_to "Delete", planet_path(@planet), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-dark border border-white rounded-5 text-decoration-none"%>
+    <% end %>
+  </div>
 </div>
