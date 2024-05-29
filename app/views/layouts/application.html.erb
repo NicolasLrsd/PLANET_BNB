@@ -14,14 +14,18 @@
   <body class="body">
     <nav class="navbar">
       <div class="logo_title">
-        <%= image_tag "rocket-png-40798.png", class: "rocket", alt: "rocket" %>
-          <a href="#">Planet Bnb</a>
+      <%= link_to planets_path do %>
+        <%= image_tag "rocket-png-40798.png", class: "rocket", alt: "rocket"%>
+        <%= "Planet bnb" %>
+      <% end %>
       </div>
       <div class="end-navbar">
         <%= link_to "Add a new planet", new_planet_path, class: "text-decoration-none text-light"%>
 
         <div class="drop-avatar">
+          <%= link_to new_user_session_path do %>
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
+          <% end %>
           <div class="dropdown mr-5">
             <button class="btn btn-secondary rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa-solid fa-list"></i>        </button>

@@ -1,9 +1,6 @@
-<%= link_to "login", new_user_session_path %>
-
 
 <ul>
   <%@planets.each do |planet|%>
     <li><%=link_to planet.name, planet_path(planet)%></li>
   <%end%>
 </ul>
-
