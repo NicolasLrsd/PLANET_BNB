@@ -1,13 +1,14 @@
 <h1><%= @planet.name %><h1>
-
+<% if @planet.photo.attached? %>
+  <p><%= cl_image_tag @planet.photo.key, height: 500, width: 600, crop: :fill %></p>
+  <% else %>
+  <p><%= image_tag "first_offers", height: 500, width: 600 %></p>
+  <% end %>
   <p><%= @planet.detail%></p>
   <p><%= @planet.price%>$</p>
-  <p><%= cl_image_tag @planet.photo.key, height: 200, width: 300, crop: :fill %></p>
 
 
 
 <p><%= link_to "Edit your planet", edit_planet_path %></p>
 <p><%= link_to "Delete", planet_path(@planet), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></p>
 <p><%= link_to "Back to list", planets_path%></p>
-
-

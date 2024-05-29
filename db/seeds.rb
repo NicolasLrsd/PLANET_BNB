@@ -10,7 +10,7 @@
 
 User.destroy_all
 
-florent = User.new(email: "flo@.gmail.com", password: "password")
+florent = User.new(email: "flo@gmail.com", password: "password")
 florent.save
 
 nicolas = User.new(email: "nico@gmail.com", password: "password")
