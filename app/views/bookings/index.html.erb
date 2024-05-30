@@ -1,0 +1,9 @@
+<div class="container d-flex">
+  <h1>Your bookings</h1>
+
+  <ul>
+    <%= @bookings.each do |booking| %>
+      <li><%= booking.start_date - booking.end_date%></li>
+    <% end %>
+  </ul>
+</div>

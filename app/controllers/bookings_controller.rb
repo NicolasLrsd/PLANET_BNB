@@ -1,10 +1,23 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = Booking.all
+  end
+
+  def new
+    @booking = Booking.new
+    @planet = Planet.find(params[:planet_id])
+  end
+
   def create
     @planet = Planet.find(params[:planet_id])
     @booking = Booking.new(bookings_params)
     @booking.planet = @planet
-    @booking.save!
-    redirect_to planet_path(@planet)
+    @booking.user = current_user
+    if @booking.save
+      redirect_to bookings_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
