@@ -3,10 +3,19 @@
 <%= link_to "login", new_user_session_path %>
 
 
-<ul>
-  <%@planets.each do |planet|%>
-    <li><%=link_to planet.name, planet_path(planet)%></li>
-  <%end%>
-</ul>
+  <div class="cards">
 
-<p><%= link_to "Add a new planet location", new_planet_path %></p>
+    <%@planets.each do |planet|%>
+      <div class="card-category">
+        <% if planet.photo.attached? %>
+          <div class="img-card">
+            <%= cl_image_tag planet.photo.key, crop: :fit, class:"img-planet" %>
+          </div>
+        <% end %>
+        <div class="card-text">
+          <h3><%=link_to "Planète #{planet.name}", planet_path(planet), class:"title-planet"%></h3>
+          <h4><%= "Prix :#{planet.price}$/ Nuit"%></h4>
+        </div>
+      </div>
+    <%end%>
+  </div>
