@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: "planets#index"
   resources :planets do
     resources :bookings, only: [:create, :new]
+    devise_for :users, only: [:create, :new]
   end
   resources :bookings, only: [:index]
   devise_for :users

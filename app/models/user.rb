@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   has_many :bookings_as_owner, through: :planets, source: :bookings # bookings on the planets that user owns
   has_many :planets # user planets
 
