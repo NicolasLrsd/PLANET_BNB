@@ -3,7 +3,7 @@
     <% if @planet.photo.attached? %>
     <p><%= cl_image_tag @planet.photo.key, height: 700, width: 700, crop: :fill %></p>
     <% else %>
-    <p><%= image_tag "planet-par-defaut", height: 700, width: 700 %></p>
+    <p><%= image_tag 'planet-par-defaut', height: 700, width: 700 %></p>
     <% end %>
   </div>
   <div class="content m-5">
