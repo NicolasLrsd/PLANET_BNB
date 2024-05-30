@@ -9,6 +9,7 @@
 #   end
 
 User.destroy_all
+Planet.destroy_all
 
 florent = User.new(email: "flo@gmail.com", password: "password")
 florent.save
