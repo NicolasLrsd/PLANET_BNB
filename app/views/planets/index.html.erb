@@ -1,16 +1,19 @@
 <div class="cards">
 
     <%@planets.each do |planet|%>
+    <%= link_to planet_path(planet) do %>
       <div class="card-category">
         <% if planet.photo.attached? %>
           <div class="img-card">
-            <%= cl_image_tag planet.photo.key, crop: :fit, class:"img-planet" %>
+            <%=  cl_image_tag planet.photo.key, crop: :fit, class:"img-planet" %>
           </div>
         <% end %>
         <div class="card-text">
-          <h3><%=link_to "Planète #{planet.name}", planet_path(planet), class:"title-planet"%></h3>
+          <h3><%= planet.name%></h3>
           <h4><%= "Prix :#{planet.price}$/ Nuit"%></h4>
         </div>
       </div>
+
+        <% end %>
     <%end%>
   </div>
