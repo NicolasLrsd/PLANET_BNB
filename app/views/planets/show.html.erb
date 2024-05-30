@@ -7,9 +7,9 @@
     <% end %>
   </div>
   <div class="content m-5">
-    <h1><%= @planet.name %></h1>
-    <p><%= @planet.detail%></p>
-    <p><%= @planet.price%>$</p>
+    <h1 class="title-planet"><%= @planet.name %></h1>
+    <p class="detail-planet"><%= @planet.detail%></p>
+    <p class="price-planet"><%= @planet.price%>$</p>
     <% if current_user == @planet.user %>
       <%= link_to "Edit your planet", edit_planet_path, class:"btn btn-dark border border-white rounded-5 text-decoration-none"%>
       <%= link_to "Delete", planet_path(@planet), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-dark border border-white rounded-5 text-decoration-none"%>
