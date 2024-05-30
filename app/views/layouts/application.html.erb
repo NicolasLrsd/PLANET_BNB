@@ -14,13 +14,11 @@
   <body class="body">
     <nav class="navbar">
       <div class="logo_title">
-      <%= link_to planets_path do %>
         <%= image_tag "rocket-png-40798.png", class: "rocket", alt: "rocket"%>
-        <%= "Planet bnb" %>
-      <% end %>
+        <h1><%= link_to "Planet bnb", planets_path, class: "title-main" %></h1>
       </div>
       <div class="end-navbar">
-        <%= link_to "Add a new planet", new_planet_path, class: "text-decoration-none text-light" %>
+        <%= link_to "Add a new planet", new_planet_path, class: "new-planet" %>
         <div class="drop-avatar">
           <%= link_to new_user_session_path do %>
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
@@ -31,7 +29,7 @@
             <ul class="dropdown-menu rounded-5 dropdown-menu-end dropdown-menu-dark mt-3">
               <li><button class="dropdown-item" type="button">Messages</button></li>
               <li><button class="dropdown-item" type="button">Favoris</button></li>
-              <li><button class="dropdown-item" type="button">Voyages</button></li>
+              <li><button class="dropdown-item" type="button">Mes Réservations</button></li>
             </ul>
             </div>
           </div>
