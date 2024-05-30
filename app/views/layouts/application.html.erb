@@ -13,6 +13,7 @@
 
   <body class="body">
     <nav class="navbar">
+      <div class="container fluid">
       <div class="logo_title">
       <%= link_to planets_path do %>
         <%= image_tag "rocket-png-40798.png", class: "rocket", alt: "rocket"%>
@@ -39,7 +40,7 @@
             </div>
           </div>
         </div>
-
+      </div>
     </nav>
     <%= yield %>
   </body>
