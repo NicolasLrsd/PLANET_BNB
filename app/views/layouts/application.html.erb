@@ -13,15 +13,13 @@
 
   <body class="body">
     <nav class="navbar">
+      <div class="container fluid">
       <div class="logo_title">
-      <%= link_to planets_path do %>
         <%= image_tag "rocket-png-40798.png", class: "rocket", alt: "rocket"%>
-        <%= "Planet bnb" %>
-      <% end %>
+        <h1><%= link_to "Planet bnb", planets_path, class: "title-main" %></h1>
       </div>
       <div class="end-navbar">
-        <%= link_to "Add a new planet", new_planet_path, class: "text-decoration-none text-light"%>
-
+        <%= link_to "Add a new planet", new_planet_path, class: "new-planet" %>
         <div class="drop-avatar">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
           <div class="dropdown mr-5">
@@ -30,7 +28,7 @@
             <ul class="dropdown-menu rounded-5 dropdown-menu-end dropdown-menu-dark mt-3">
               <% if current_user == nil %>
                 <li><%= link_to "Connexion", new_user_session_path, class:"btn dropdown-item" %></li>
-                <li><%= link_to "Inscritpion", new_user_registration_path, class:"btn dropdown-item" %></li>
+                <li><%= link_to "Inscription", new_user_registration_path, class:"btn dropdown-item" %></li>
               <% else %>
                 <li><%= link_to "Déconnexion", destroy_user_session_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn dropdown-item" %></li>
                 <li><%= link_to "Mes réservations", bookings_path, class:"btn dropdown-item" %></li>
@@ -39,7 +37,7 @@
             </div>
           </div>
         </div>
-
+      </div>
     </nav>
     <%= yield %>
   </body>
