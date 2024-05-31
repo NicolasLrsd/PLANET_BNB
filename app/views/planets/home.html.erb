@@ -1,4 +1,18 @@
-<h1>Mes planets</h1>
+
+<div class="search">
+    <%= form_with url: planets_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Type a planet name"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-dark rounded-5" %>
+    <% end %>
+</div>
+
+
+
+
 
 <div class="cards">
 
@@ -10,11 +24,11 @@
             <%=  cl_image_tag planet.photo.key, crop: :fit, class:"img-planet" %>
           </div>
         <% end %>
+        <div class="card-text">
           <h3><%= planet.name%></h3>
           <h4><%= "Prix: #{planet.price}$ / Nuit"%></h4>
-             <%= link_to "Edit your planet", edit_planet_path, class:"btn btn-dark border border-white rounded-5 text-decoration-none"%>
-            <%= link_to "Delete", planet_path(@planet), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-dark border border-white rounded-5 text-decoration-none"%>
         </div>
+      </div>
 
         <% end %>
     <%end%>
