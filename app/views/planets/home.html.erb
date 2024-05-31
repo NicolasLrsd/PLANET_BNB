@@ -1,6 +1,6 @@
 
 <div class="search">
-    <%= form_with url: planets_path, method: :get, class: "d-flex" do %>
+    <%= form_with url: root_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
             class: "form-control",
