@@ -3,11 +3,15 @@ class PlanetsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
 
-  def index
+  def home
     @planets = Planet.all
     if params[:query].present?
       @planets = @planets.where("name ILIKE ?", "%#{params[:query]}%")
     end
+  end
+
+  def index
+    @planets = Planet.where(user: current_user)
   end
 
   def show
