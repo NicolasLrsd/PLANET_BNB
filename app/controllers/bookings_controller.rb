@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+
     @planet = Planet.find(params[:planet_id])
     @booking = Booking.new(bookings_params)
     @booking.planet = @planet
@@ -18,6 +19,22 @@ class BookingsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path
+  end
+
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(bookings_params)
+    redirect_to bookings_path
   end
 
   private
