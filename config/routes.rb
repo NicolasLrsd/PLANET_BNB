@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create, :new]
     devise_for :users, only: [:create, :new]
   end
-  resources :bookings, only: [:index]
+  resources :bookings, only: [:index, :destroy, :edit, :update]
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,0 +1,7 @@
+<div class = "mx-auto" style="width: 400px;">
+  <%= simple_form_for [@planet, @booking] do |f| %>
+    <%= f.input :start_date, input_html: { class: "rounded-5"} %>
+    <%= f.input :end_date, input_html: { class: "rounded-5"} %>
+    <%= f.submit class: "btn btn-dark border border-white rounded-5" %>
+  <% end %>
+</div>
