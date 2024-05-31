@@ -14,5 +14,6 @@
 .body{
   background-image: asset-url("background.png");
    background-size: cover;
+    background-attachment: fixed;
    color: white;
 }
