@@ -1,1 +1,4 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Voici une petite vidéo du site web : 
+
+Uploading Présentation Planet BNB.mp4…
+
