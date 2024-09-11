@@ -1,4 +1,3 @@
 Voici une petite vidéo du site web : 
 
-Uploading Présentation Planet BNB.mp4…
-
+https://github.com/user-attachments/assets/09bae908-fdc0-4c1d-a202-955fa0d6a812
